@@ -50,6 +50,8 @@ public class VentaController {
 		try {
 			Venta ventaCreada = ventaService.saveVenta(venta);
 			return ResponseEntity.status(HttpStatus.CREATED).body(ventaCreada);
+		}catch(IllegalArgumentException e){
+			return ResponseEntity.unprocessableEntity().build();
 		}catch(Exception e){
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
 		}
