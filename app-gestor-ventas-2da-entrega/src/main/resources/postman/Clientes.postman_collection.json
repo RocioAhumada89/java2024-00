@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "a499637c-77d5-4dc9-9c9e-b42afd94f8bb",
+		"name": "Clientes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26078396"
+	},
+	"item": [
+		{
+			"name": "Lista todos los Clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/clientes/all-clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"all-clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear un Cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"nombre\": \"Virginia\",\r\n        \"apellido\": \"Clermont\",\r\n        \"email\": \"vir7233@gmail.com\",\r\n        \"telefono\": \"3517853428\",\r\n        \"direccion\": \"Mendoza 55, Córdoba\",\r\n        \"dni\": 22333388\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clientes/agregar-cliente-nuevo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"agregar-cliente-nuevo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar un Cliente por su ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/clientes/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar un Cliente por su ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/clientes/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar un Cliente por su ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nombre\": \"Laura Analia\",\r\n        \"apellido\": \"Cavallero\",\r\n        \"email\": \"laucavallero73@gmail.com\",\r\n        \"telefono\": \"3517853785\",\r\n        \"direccion\": \"Ayacucho 108, Córdoba\",\r\n        \"dni\": 22333724\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clientes/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

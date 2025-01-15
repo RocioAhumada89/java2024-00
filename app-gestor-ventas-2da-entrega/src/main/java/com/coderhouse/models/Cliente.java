@@ -1,18 +1,14 @@
 package com.coderhouse.models;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 import org.hibernate.annotations.CreationTimestamp;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -32,9 +28,6 @@ public class Cliente {
     @Column(unique = true, nullable = false)
     private int dni;
 
-    @ManyToMany(mappedBy = "clientes", fetch = FetchType.EAGER)
-	private List<Producto> productos = new ArrayList<>();
-    
     @Column(columnDefinition = "TIMESTAMP(0)", nullable = false, updatable = false)
     @CreationTimestamp
     private LocalDateTime createdAt;
@@ -124,17 +117,6 @@ public class Cliente {
 		this.dni = dni;
 	}
 
-
-	public List<Producto> getProductos() {
-		return productos;
-	}
-
-
-	public void setProductos(List<Producto> productos) {
-		this.productos = productos;
-	}
-
-
 	public LocalDateTime getCreatedAt() {
 		return createdAt;
 	}
@@ -148,8 +130,7 @@ public class Cliente {
 	@Override
 	public String toString() {
 		return "Cliente [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", email=" + email
-				+ ", telefono=" + telefono + ", direccion=" + direccion + ", dni=" + dni + ", productos=" + productos
-				+ ", createdAt=" + createdAt + "]";
+				+ ", telefono=" + telefono + ", direccion=" + direccion + ", dni=" + dni + ", createdAt=" + createdAt + "]";
 	}
 
 

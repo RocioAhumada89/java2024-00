@@ -23,7 +23,7 @@ public class MainApp implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 
 		try {
-			
+
 			Producto producto1 = new Producto("Shampoo Dove", "Producto de Higiene", 5000d);
 			Producto producto2 = new Producto("Servilleta Carrefour", "Producto de Cocina", 1550.75d);
 			Producto producto3 = new Producto("Repelente OFF", "Producto General", 525d);
