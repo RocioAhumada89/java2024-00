@@ -1,0 +1,33 @@
+{
+	"info": {
+		"_postman_id": "86d000c7-75c2-41a2-96d4-c477a0cf616c",
+		"name": "Time API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26078396"
+	},
+	"item": [
+		{
+			"name": "Obtener la Fecha Actual desde una API Externa",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8282/api/fecha",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8282",
+					"path": [
+						"api",
+						"fecha"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
